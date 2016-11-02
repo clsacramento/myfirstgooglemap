@@ -1,4 +1,4 @@
-# myfirstgooglemap
+# myfirstgooglemap - static content
 
 Just an html example using javascript to plot a google maps pointing to specified city.
 
