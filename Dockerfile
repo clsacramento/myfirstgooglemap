@@ -6,4 +6,4 @@ RUN apt update
 RUN apt install git -y
 RUN git clone https://github.com/clsacramento/myfirstgooglemap
 RUN cp -R myfirstgooglemap/static/* /usr/share/nginx/html/.
-CMD ["sh", "-c", "cd myfirstgooglemap; git pull; nginx -g 'daemon off;'"]
+CMD ["sh", "-c", "cd myfirstgooglemap; git pull; cp -R static/* /usr/share/nginx/html/.; nginx -g 'daemon off;'"]
