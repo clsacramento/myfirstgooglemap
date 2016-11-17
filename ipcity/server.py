@@ -16,4 +16,4 @@ def printmap():
     return "Hello World! City: "+city+", Country: "+country
 
 if __name__ == "__main__":
-    app.run(port=port)
+    app.run(host='0.0.0.0',port=port)
