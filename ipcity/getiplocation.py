@@ -13,7 +13,7 @@ ip = getip.get_my_ip()
 
 url = "http://geoip.nekudo.com/api/"+ip
 
-response = requests.get(url)
+response = requests.get(url, verify=False)
 
 def getiplocation(ip):
    if response.ok:
@@ -21,7 +21,10 @@ def getiplocation(ip):
       data = json.loads(response.content)
       country = data['country']['code']
       city = data['city']
-      getiplocation_logger.info("Location: " + city + ", "+country)
+      if type(city) is bool:
+        getiplocation_logger.info("Location: "+country)
+      else:
+        getiplocation_logger.info("Location: " + city + ", "+country)
       return city, country
 
 def getmyiplocation():
