@@ -32,6 +32,7 @@ function myMap() {
           zoom: 10
        }
        var map = new google.maps.Map(mapCanvas, mapOptions);
+       var marker = new google.maps.Marker({position: {lat: lat, lng: lng}, map: map});
     });
 
   
