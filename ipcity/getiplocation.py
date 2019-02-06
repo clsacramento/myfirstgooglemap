@@ -11,7 +11,7 @@ getiplocation_logger = logging.getLogger('getiplocation')
 ip = getip.get_my_ip()
 
 
-url = "http://geoip.nekudo.com/api/"+ip
+url = "http://ip-api.com/json/"+ip
 
 response = requests.get(url, verify=False)
 
