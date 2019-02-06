@@ -19,7 +19,7 @@ def getiplocation(ip):
    if response.ok:
       getiplocation_logger.debug(response.content)
       data = json.loads(response.content)
-      country = data['country']+', '+data['countryCode']
+      country = data['countryCode']
       city = data['city']
       if type(city) is bool:
         getiplocation_logger.info("Location: "+country)
