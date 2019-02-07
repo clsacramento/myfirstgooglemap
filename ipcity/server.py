@@ -9,10 +9,16 @@ try:
 except KeyError:
     port = 5000
 
+
+try:
+    key = '&key='+os.environ['KEY']
+except KeyError:
+    key = ''
+
 @app.route("/")
 def printmap():
     (city,country) = getiplocation.getmyiplocation()
-    return render_template('index.html',_city=city,_country=country)
+    return render_template('index.html',_city=city,_country=country,_key=key)
     return "Hello World! City: "+city+", Country: "+country
 
 if __name__ == "__main__":
