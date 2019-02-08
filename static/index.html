@@ -20,7 +20,7 @@ function myMap() {
            lat = results[0].geometry.location.lat();
            lng = results[0].geometry.location.lng();     
        } else {
-           alert("Location << " + loc + " >> not found.\nShowing London instead.");
+           alert("Location << " + loc + " >> not found.\nShowing London instead. Resaon: "+status);
            hloc.innerText = 'London, UK'
            var lat = 51.5;
            var lng = -0.2;
